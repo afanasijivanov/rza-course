@@ -3,7 +3,7 @@
 
 #include <string>
 #include <fstream>
-
+#include <vector>
 namespace rza_course {
 namespace week4 {
 
@@ -21,9 +21,15 @@ class SignalLogger {
   
   // Log multiple signal states
   void LogSignalStates(const std::vector<int32_t>& states);
+
+  // Log with time
+  void LogSignalWithTimestamp(int32_t state);
+
+  // Size of LogFile
+  void GetLogFileSize(long);
   
  private:
-  std::ofstream log_file_;
+  std::ofstream log_file_;        
   std::string filename_;
 };
 
