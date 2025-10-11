@@ -21,6 +21,12 @@ class DigitalSignal {
   // Get the signal value
   int32_t GetValue() const;
   
+  //Toggle signal value between 0 and 1
+  void ToggleValue(int32_t value);
+
+  //1 is True
+  bool IsHigh() const;
+
  private:
   int32_t value_;
 };

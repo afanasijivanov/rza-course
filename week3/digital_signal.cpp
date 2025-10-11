@@ -15,5 +15,14 @@ int32_t DigitalSignal::GetValue() const {
   return value_;
 }
 
+void DigitalSignal::ToggleValue(int32_t value) {
+  value_ = 1 - value;
+}
+
+bool DigitalSignal::IsHigh() const{
+  return value_ == 1;
+}
+  
+
 }  // namespace week3
 }  // namespace rza_course
